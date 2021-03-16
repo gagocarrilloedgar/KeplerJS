@@ -32,7 +32,6 @@ celbody:{
 posistion:{
     long:{type:Number} // Longitude [grad]
     lat:{type:Number} // latitude [grad]
-
 }
 
 ```
