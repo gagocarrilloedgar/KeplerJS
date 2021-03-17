@@ -13,9 +13,9 @@
  * Euler iterative method to solve the kepler's equation
  * 
  */
-import deg2rad from "./deg2rad"
+const { deg2rad } = require("./deg2rad")
 
-function keplerslv(obt) {
+exports.keplerslv = (obt) => {
 
     // Inits
     const M = deg2rad(obt.M); // Mean anomaly
@@ -52,4 +52,3 @@ function keplerslv(obt) {
     }
 }
 
-export default keplerslv;

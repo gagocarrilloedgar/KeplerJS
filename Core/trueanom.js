@@ -15,7 +15,7 @@
  * 
  */
 
-function trueanom(obt, E) {
+exports.trueanom = (obt, E) => {
     const e = obt.e;
 
     var c1 = (1 - e) / (1 + e);

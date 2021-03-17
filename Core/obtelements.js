@@ -20,10 +20,10 @@
  * 
  */
 
-import deg2rad from "./deg2rad";
-import mod from "./mod";
+const { deg2rad } = require("./deg2rad");
+const { mod } = require("./mod");
 
-function obtelements(body, JD) {
+exports.obtelements = (body, JD) => {
 
     const AU = 149597871; // Astronomical Unit
     const pi = Math.PI;
@@ -50,4 +50,3 @@ function obtelements(body, JD) {
 
 }
 
-export default obtelements;

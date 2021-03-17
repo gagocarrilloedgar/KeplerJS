@@ -16,8 +16,5 @@
  */
 
 
-function deg2rad(x) {
-    return (x * Math.PI / 180)
-}
+exports.deg2rad = (x) => x * Math.PI / 180;
 
-export default deg2rad  ;

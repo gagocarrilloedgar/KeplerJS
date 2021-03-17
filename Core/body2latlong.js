@@ -1,14 +1,14 @@
 
-import { norm } from "mathjs";
-import date2julian from "./date2julian";
-import keplerslv from "./keplerslv";
-import obtelements from "./obtelements";
-import statevector from "./statevector"
+const { norm } = require("mathjs");
+const date2julian = require("./date2julian");
+const keplerslv = require("./keplerslv");
+const obtelements = require("./obtelements");
+const statevector = require("./statevector");
 
-function main(body, earth, date) {
+exports.body2latlong = (body, earth, date) => {
 
     // Standard gravitational parameter of the sun
-    mu = 1.32712440018e11; // [km ^ 3 s ^ -2]
+    const mu = 1.32712440018e11; // [km ^ 3 s ^ -2]
 
     // Julian Century
     const CY = date2julian(date.year, date.month, date.day, date.hour, date.minute, date.second);

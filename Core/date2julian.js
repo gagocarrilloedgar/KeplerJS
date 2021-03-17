@@ -16,7 +16,7 @@
  * 
  */
 
-function date2julian(year, month, day, hour, minute, second) {
+exports.date2julian = (year, month, day, hour, minute, second) => {
 
     const a = Math.floor((14 - month) / 12);
     const y = year + 4800 - a;
@@ -31,4 +31,3 @@ function date2julian(year, month, day, hour, minute, second) {
     return JD;
 }
 
-export default date2julian;

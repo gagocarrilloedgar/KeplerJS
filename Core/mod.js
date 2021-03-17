@@ -1,6 +1,2 @@
 
-function mod(n, m) {
-    return ((n % m) + m) % m;
-}
-
-export default mod;
+exports.mod = (n, m) => ((n % m) + m) % m;

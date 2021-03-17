@@ -1,12 +1,27 @@
+/**
+ * Astrodynamics | Kepler Solver
+ * Author: Edgar Gago Carrillo
+ * Date 16/03/2021
+ * 
+ * Inputs:
+ * elemnts:{} objet containg the converted keplerian elements of the celestial body
+ * theta: [rad] true anomally
+ * mu: Sun gravitaional constant
+ * 
+ * Outputs:
+ * state {r,v} contains the position vector and velocity of a celestial body
+ * 
+ * Description:
+ * Creates the state vector of any celestial body when passing its true anomally and its
+ * keplerian elements
+ * 
+ */
 
 
 
+const matrix = require("mathjs")
 
-
-
-import matrix from "mathjs"
-
-function statevector(elemnts, theta, mu) {
+exports.statevector = (elemnts, theta, mu) => {
 
     const e = elemnts.e;
     const i = elemnts.inc;
@@ -46,12 +61,12 @@ function statevector(elemnts, theta, mu) {
     return state;
 }
 
-export default statevector;
-
+// rotational matrix around the x direction
 function rotx(i) {
     return matrix([1, 0, 0], [0, Math.cos(i), Math.sin(i)], [0, -Math.sin(i), Math.cos(i)]);
 }
 
+// rotational matrix around the x direction
 function rotz(w) {
     return matrix([Math.cos(w), -Math.sin(w), 0], [Math.sin(W), Math.cos(w), 0], [0, 0, 1]);
 }

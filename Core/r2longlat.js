@@ -16,7 +16,7 @@
  * 
  */
 
-function r2longlat(r, r_) {
+exports.r2longlat = (r, r_) => {
 
     // Allocation for clearer code
     const x = r[1];
