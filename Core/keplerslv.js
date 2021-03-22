@@ -18,13 +18,13 @@ const { deg2rad } = require("./deg2rad")
 exports.keplerslv = (obt) => {
 
     // Inits
-    const M = deg2rad(obt.M); // Mean anomaly
+    const M = deg2rad(obt.ma); // Mean anomaly
     const e = obt.e; // eccensitricty
 
     const delta = 10e-7; // Error
-    var t = 1;       // While initialization
-    var i = 1;       // Variable to count the numer of iterations
-    var E = M;       // Initialization
+    let t = 1;       // While initialization
+    let i = 1;       // Variable to count the numer of iterations
+    let E = M;       // Initialization
     const max = 50;   // Maximum iterations
 
 
@@ -50,5 +50,7 @@ exports.keplerslv = (obt) => {
 
         }
     }
+
+    return E;
 }
 

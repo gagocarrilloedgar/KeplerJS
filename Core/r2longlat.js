@@ -19,18 +19,20 @@
 exports.r2longlat = (r, r_) => {
 
     // Allocation for clearer code
-    const x = r[1];
-    const y = r[2];
-    const z = r[3];
+    const x = r[0];
+    const y = r[1];
+    const z = r[2];
+
 
     var beta = Math.asin(z / r_);
-    // Quadran check
 
+
+    // Quadran check
     if (z < 0) {
         beta = 2 * Math.PI + beta;
     }
 
-    var lamda = Math.asin(y / (r_ * Math.cos(beta)));
+    let lamda = Math.asin(y / (r_ * Math.cos(beta)));
 
     //Quadran check
     if (x < 0) {
@@ -39,7 +41,7 @@ exports.r2longlat = (r, r_) => {
 
     const pos = {
         lat: beta,
-        long: lambda
+        long: lamda
     }
 
     return pos;

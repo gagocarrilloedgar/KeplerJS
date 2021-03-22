@@ -4,11 +4,11 @@
  * Date 16/03/2021
  * 
  * Description
- * Computation of the true anomally 
+ * Passes the introduced celstial body to the int units and ensures that all the parameters
+ * are correctlty encapsuled
  *
  * Inputs
  * body: orbital elements {}
- * JD: days from J2000
  * 
  * Ouputs
  * a: semi-major 
@@ -17,33 +17,32 @@
  * true anomaly
  * omega: argument of 
  * w_: right ascension 
+ * M: mean anomaly
  * 
  */
 
 const { deg2rad } = require("./deg2rad");
 const { mod } = require("./mod");
 
-exports.obtelements = (body, JD) => {
+exports.obtelements = (body) => {
+
+    if (body == undefined) {
+        return Error("El objeto celeste introducido es undefined");
+    } else if (Object.keys(body).length < 6) {
+        return Error("Faltan uno o más parámetros del objeto")
+    }
 
     const AU = 149597871; // Astronomical Unit
     const pi = Math.PI;
 
-    // Compute T reference time (number of centuries past J2000)
-    const T = JD / 36525;
-
-    // Adjusting obt elements
-
-    const obt_ = body.map(element => element.val + element.inc);
-
     // Computing the elements
-
     const obt = {
-        a: obt_[1] * AU,
-        e: obt_[2],
-        inc: deg2rad(obt_[3]),
-        omega: mod(deg2rad(obt_[6]), 2 * pi),
-        w_: mod(deg2rad(obt_[5] - obt_[6]), 2 * pi),
-        M: mod(mod(deg2rad(obt_[4] - obt_[5]), 2 * pi), 2 * pi),
+        a: body.a === undefined ? 1 * AU : body.a, //Km
+        e: body.e === undefined ? 0 : body.e, // adim
+        i: body.i === undefined ? 0 : deg2rad(body.i),
+        om: body.om === undefined ? 0 : mod(deg2rad(body.om), 2 * pi),
+        w: body.w === undefined ? 0 : mod(deg2rad(body.w), 2 * pi),
+        ma: body.ma === undefined ? 0 : mod(deg2rad(body.ma), 2 * pi)
     }
 
     return obt;

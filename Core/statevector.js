@@ -17,16 +17,25 @@
  * 
  */
 
+const { matrix, multiply } = require("mathjs");
 
+// rotational matrix around the x direction
+function rotx(i) {
+    return matrix([[1, 0, 0], [0, Math.cos(i), Math.sin(i)], [0, -Math.sin(i), Math.cos(i)]])._data;
+}
 
-const matrix = require("mathjs")
+// rotational matrix around the x direction
+function rotz(w) {
+    return matrix([[Math.cos(w), -Math.sin(w), 0], [Math.sin(w), Math.cos(w), 0], [0, 0, 1]])._data;
+}
+
 
 exports.statevector = (elemnts, theta, mu) => {
 
     const e = elemnts.e;
-    const i = elemnts.inc;
-    const w = elemnts.omega;
-    const argp = elemnts.w_;
+    const i = elemnts.i;
+    const w = elemnts.om;
+    const argp = elemnts.w;
     const a = elemnts.a;
 
     if (e !== 1) {
@@ -36,22 +45,27 @@ exports.statevector = (elemnts, theta, mu) => {
     }
 
     // Calculate position and vel (norm)
-    var r = p / (1 + e * Math.cos(theta));
+    let r = p / (1 + e * Math.cos(theta));
 
-    var v = Math.sqrt(mu / p);
+    let v = Math.sqrt(mu / p);
+
 
     // Position  vect
-    const r_v = r * [cos(theta), sin(theta), 0];
+    const r_v = multiply(r, [Math.cos(theta), Math.sin(theta), 0]);
 
     // Velocity vector
-    const v_v = v * [-sin(theta), e + cos(theta), 0];
+    const k = parseInt(e) + Math.cos(theta);
+    const v_v = multiply(v, [-Math.sin(theta), k, 0]);
+
 
     //Rotation ma
-    const R313 = rotz(w) * rotx(argp) * rotz(i);
+    const R313 = multiply(multiply(rotz(w), rotx(argp)), rotz(i));
+
+
 
     // Rotate vectors to ICF (xyz) 
-    r_ = (R313 * r_v);
-    v_ = (R313 * v_v);
+    r_ = multiply(R313, r_v);
+    v_ = multiply(R313, v_v);
 
     const state = {
         r: r_,
@@ -59,15 +73,5 @@ exports.statevector = (elemnts, theta, mu) => {
     }
 
     return state;
-}
-
-// rotational matrix around the x direction
-function rotx(i) {
-    return matrix([1, 0, 0], [0, Math.cos(i), Math.sin(i)], [0, -Math.sin(i), Math.cos(i)]);
-}
-
-// rotational matrix around the x direction
-function rotz(w) {
-    return matrix([Math.cos(w), -Math.sin(w), 0], [Math.sin(W), Math.cos(w), 0], [0, 0, 1]);
 }
 
