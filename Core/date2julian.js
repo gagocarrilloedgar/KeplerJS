@@ -43,7 +43,6 @@ exports.date2julian = (date) => {
 }
 
 const checkKey = (date, param) => {
-
     if (date[param] === undefined) {
         return Error(`${param} no se ha pasado dentro del objecto date`)
     } else {
