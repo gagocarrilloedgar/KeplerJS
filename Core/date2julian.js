@@ -16,18 +16,37 @@
  * 
  */
 
-exports.date2julian = (year, month, day, hour, minute, second) => {
 
-    const a = Math.floor((14 - month) / 12);
-    const y = year + 4800 - a;
-    const m = month + 12 * a - 3;
+exports.date2julian = (date) => {
+
+
+    if (date === undefined) {
+        return 0
+    } else if (Object.keys(date).length !== 6) {
+        return Error("Falta uno o más parámetros en el objeto date")
+    }
+
+    const a = Math.floor((14 - date.month) / 12);
+    const y = checkKey(date, "year") + 4800 - a;
+    const m = checkKey(date, "month") + 12 * a - 3;
+
+
 
     // Compute Julian Day Number
-    const JDN = day + Math.floor((153 * m + 2) / 5) + 365 * y + Math.floor(y / 4) - 32083;
+    const JDN = checkKey(date, "day") + Math.floor((153 * m + 2) / 5) + 365 * y + Math.floor(y / 4) - 32083;
 
     // Find Julian Date
-    const JD = JDN + (hour - 12) / 24 + minute / 1440 + second / 86400;
+    const JD = JDN + (checkKey(date, "hour") - 12) / 24 + checkKey(date, "minute") / 1440 + checkKey(date, "second") / 86400;
 
     return JD;
 }
 
+const checkKey = (date, param) => {
+
+    if (date[param] === undefined) {
+        return Error(`${param} no se ha pasado dentro del objecto date`)
+    } else {
+        return 0
+    }
+
+}

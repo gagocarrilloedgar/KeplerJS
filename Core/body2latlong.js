@@ -11,7 +11,7 @@ exports.body2latlong = (body, earth, date) => {
     const mu = 1.32712440018e11; // [km ^ 3 s ^ -2]
 
     // Julian Century
-    const CY = date2julian(date.year, date.month, date.day, date.hour, date.minute, date.second);
+    const CY = date2julian(date);
 
     // Orbital elements of the body and the earth
     const obt_body = obtelements(body, JD);
