@@ -26,6 +26,7 @@ exports.date2julian = (date) => {
         return Error("Falta uno o más parámetros en el objeto date")
     }
 
+
     const a = Math.floor((14 - date.month) / 12);
     const y = checkKey(date, "year") + 4800 - a;
     const m = checkKey(date, "month") + 12 * a - 3;
