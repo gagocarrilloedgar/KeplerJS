@@ -26,7 +26,7 @@ const { mod } = require("./mod");
 
 exports.obtelements = (body) => {
 
-    if (body == undefined) {
+    if (body === undefined) {
         return Error("El objeto celeste introducido es undefined");
     } else if (Object.keys(body).length < 6) {
         return Error("Faltan uno o más parámetros del objeto")

@@ -1,5 +1,5 @@
 
-const { norm, sum, multiply, subtract } = require("mathjs");
+const { norm, subtract } = require("mathjs");
 const { keplerslv } = require("./keplerslv");
 const { obtelements } = require("./obtelements");
 const { r2longlat } = require("./r2longlat");
@@ -7,11 +7,24 @@ const { statevector } = require("./statevector");
 const { trueanom } = require("./trueanom");
 
 
-exports.body2latlong = (body, earth) => {
+exports.body2latlong = (body) => {
 
     // Standard gravitational parameter of the sun
     const mu = 1.32712440018e11; // [km ^ 3 s ^ -2]
 
+    // Earth object 
+    // for the simiplicity of the constant we have supposed 
+    // the orbital parameters of the earth to be the ones in 0 JD
+
+    const earth = {
+        a: 1, // UA
+        e: 0.01671022, //deg
+        i: 0.00005,//deg
+        om: 0,//deg
+        w: -11.26064, //deg
+        ma: 100.46435 - (-11.26064),//deg
+    }
+    
     // Orbital elements of the body and the earth
     const obt_body = obtelements(body);
     const obt_e = obtelements(earth);
@@ -30,14 +43,13 @@ exports.body2latlong = (body, earth) => {
     const rv_body = statevector(obt_body, theta_body, mu);
     const rv_e = statevector(obt_e, theta_e, mu);
 
-    const rv = subtract(rv_body.r,rv_e.r);
+    const rv = subtract(rv_body.r, rv_e.r);
     const r_ = norm(rv);
 
 
     // Finally compute the longitude and latitude
     const pos = r2longlat(rv, r_);
+    
 
-    console.log(pos)
-
-    //return pos;
+    return pos;
 }
