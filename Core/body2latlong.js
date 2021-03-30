@@ -50,6 +50,5 @@ exports.body2latlong = (body) => {
     // Finally compute the longitude and latitude
     const pos = r2longlat(rv, r_);
     
-
     return pos;
 }

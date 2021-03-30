@@ -13,11 +13,10 @@
  * Ouputs
  * a: semi-major 
  * e: eccentricity
- * inc: inclination to 
- * true anomaly
- * omega: argument of 
- * w_: right ascension 
- * M: mean anomaly
+ * i: inclination to 
+ * om: argument of 
+ * w: right ascension 
+ * ma: mean anomaly
  * 
  */
 

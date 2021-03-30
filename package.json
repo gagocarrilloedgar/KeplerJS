@@ -2,7 +2,7 @@
   "scripts": {
     "test": "jest --verbose"
   },
-  "name": "lambertjs",
+  "name": "keplerjs",
   "description": "Kepler solver to compute a celestial body position over the surface of the earth.",
   "version": "1.0.0",
   "main": "index.js",

@@ -16,6 +16,8 @@
  * 
  */
 
+const { rad2deg } = require("./rad2deg");
+
 exports.r2longlat = (r, r_) => {
 
     // Allocation for clearer code
@@ -40,8 +42,8 @@ exports.r2longlat = (r, r_) => {
     }
 
     const pos = {
-        lat: beta,
-        long: lamda
+        lat: rad2deg(beta),
+        long: rad2deg(lamda)
     }
 
     return pos;
