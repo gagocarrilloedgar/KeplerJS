@@ -1,6 +1,8 @@
 # KeplerJS
 Kepler solver to compute a celestial body position over the surface of the earth.
 
+![npm](https://img.shields.io/npm/dw/keplerjs?logo=NPM)
+
 ## Install
 
 ```shell
