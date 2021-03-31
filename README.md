@@ -27,13 +27,13 @@ npm i keplerjs
 
 ```javascript
 
-const {body2longlat} = require("keplerjs");
+const {body2latlong} = require("keplerjs");
 
 /**
  * @param {body} //Celesitial body object
  */
 
-body2longlat(body);
+body2latlong(body);
 
 ```
 
