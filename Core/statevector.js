@@ -38,7 +38,8 @@ exports.statevector = (elemnts, theta, mu) => {
     const argp = elemnts.w;
     const a = elemnts.a;
 
-    let p;
+    var p;
+    
     if (e !== 1) {
         p = a * (1 - e ^ 2); // Ellipse, Hyperbola
     } else {
