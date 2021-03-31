@@ -27,11 +27,8 @@ exports.date2julian = (date) => {
     }
 
     Object.keys(date).map(param => {
-        if (date[param] === undefined) {
-            return 0;
-        } else {
-            continue;
-        }
+        if (date[param] === undefined) return 0;
+
 
     })
 
