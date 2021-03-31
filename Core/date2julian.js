@@ -26,11 +26,11 @@ exports.date2julian = (date) => {
         return Error("Falta uno o más parámetros en el objeto date")
     }
 
-    const resp = Object.keys(date).map(param => {
+    Object.keys(date).map(param => {
         if (date[param] === undefined) {
             return 0;
         } else {
-            return;
+            continue;
         }
 
     })
