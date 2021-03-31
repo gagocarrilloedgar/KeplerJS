@@ -2,7 +2,8 @@
 Kepler solver to compute a celestial body position over the surface of the earth.
 
 
-![npm](https://img.shields.io/npm/dw/keplerjs?logo=NPM) ![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/gagocarrilloedgar/keplerjs?logo=codefactor) ![GitHub repo size](https://img.shields.io/github/repo-size/gagocarrilloedgar/keplerjs?logo=github) ![NPM](https://img.shields.io/npm/l/keplerjs) ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/gagocarrilloedgar/keplerjs?logo=github)
+![npm](https://img.shields.io/npm/dw/keplerjs?logo=NPM) ![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/gagocarrilloedgar/keplerjs?logo=codefactor) ![GitHub repo size](https://img.shields.io/github/repo-size/gagocarrilloedgar/keplerjs?logo=github) ![NPM](https://img.shields.io/npm/l/keplerjs) 
+
 
 ## Install
 
