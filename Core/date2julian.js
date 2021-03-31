@@ -26,19 +26,14 @@ exports.date2julian = (date) => {
         return Error("Falta uno o más parámetros en el objeto date")
     }
 
-    // Keys check
-
-    for (i = 0; i <= Object.keys(date).length; ++i) {
-
-    }
     const resp = Object.keys(date).map(param => {
         if (date[param] === undefined) {
             return 0;
+        } else {
+            return;
         }
 
     })
-
-    console.log(resp);
 
     const a = Math.floor((14 - date.month) / 12);
     const y = date.year + 4800 - a;

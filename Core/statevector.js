@@ -39,9 +39,9 @@ exports.statevector = (elemnts, theta, mu) => {
     const a = elemnts.a;
 
     if (e !== 1) {
-        p = a * (1 - e ^ 2); // Ellipse, Hyperbola
+        const p = a * (1 - e ^ 2); // Ellipse, Hyperbola
     } else {
-        p = a; // Parabola (arbitrary convention)
+        const p = a; // Parabola (arbitrary convention)
     }
 
     // Calculate position and vel (norm)
@@ -61,11 +61,9 @@ exports.statevector = (elemnts, theta, mu) => {
     //Rotation ma
     const R313 = multiply(multiply(rotz(w), rotx(argp)), rotz(i));
 
-
-
     // Rotate vectors to ICF (xyz) 
-    r_ = multiply(R313, r_v);
-    v_ = multiply(R313, v_v);
+    const r_ = multiply(R313, r_v);
+    const v_ = multiply(R313, v_v);
 
     const state = {
         r: r_,
