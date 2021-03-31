@@ -38,10 +38,11 @@ exports.statevector = (elemnts, theta, mu) => {
     const argp = elemnts.w;
     const a = elemnts.a;
 
+    let p;
     if (e !== 1) {
-        const p = a * (1 - e ^ 2); // Ellipse, Hyperbola
+        p = a * (1 - e ^ 2); // Ellipse, Hyperbola
     } else {
-        const p = a; // Parabola (arbitrary convention)
+        p = a; // Parabola (arbitrary convention)
     }
 
     // Calculate position and vel (norm)
