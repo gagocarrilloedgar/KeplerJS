@@ -4,7 +4,7 @@
   },
   "name": "keplerjs",
   "description": "Kepler solver to compute a celestial body position over the surface of the earth.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "index.js",
   "dependencies": {
     "mathjs": "^9.3.0"

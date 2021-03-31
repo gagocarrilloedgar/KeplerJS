@@ -1,5 +1,4 @@
 const { expect } = require("@jest/globals");
-const { deg2rad } = require("../Core/deg2rad");
 const { obtelements } = require("../Core/obtelements");
 
 
