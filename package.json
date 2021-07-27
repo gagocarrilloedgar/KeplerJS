@@ -9,7 +9,7 @@
   "main": "index.js",
   "dependencies": {
     "jest-html-reporter": "^3.4.1",
-    "mathjs": "^9.3.0",
+    "mathjs": "^9.4.3",
     "shelljs": "^0.8.4"
   },
   "devDependencies": {
