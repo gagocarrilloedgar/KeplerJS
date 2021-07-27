@@ -7,10 +7,14 @@
   "version": "1.0.3",
   "main": "index.js",
   "dependencies": {
+    "jest-html-reporter": "^3.4.1",
     "mathjs": "^9.3.0"
   },
   "devDependencies": {
     "jest": "^26.6.3",
+    "jest-it-up": "^1.2.5",
+    "jest-json-reporter": "^1.2.2",
+    "jest-stare": "^2.2.2",
     "keplerjs": "^1.0.3"
   },
   "repository": {
@@ -28,5 +32,19 @@
   "bugs": {
     "url": "https://github.com/gagocarrilloedgar/KelperJS/issues"
   },
-  "homepage": "https://github.com/gagocarrilloedgar/KelperJS#readme"
+  "homepage": "https://github.com/gagocarrilloedgar/KelperJS#readme",
+  "jest": {
+    "collectCoverage": true,
+    "coverageDirectory": "./testing/report",
+    "forceCoverageMatch": [
+      "**/*.t.js"
+    ],
+    "coverageReporters": [
+      "json-summary"
+    ],
+    "testResultsProcessor": "jest-json-reporter"
+  },
+  "jestJsonReporter": {
+    "outputFile": "./testing/report/results.json"
+  }
 }
