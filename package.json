@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "test": "jest --verbose"
+    "test": "jest --verbose",
+    "sonar-scanner": "node_modules/sonar-scanner/bin/sonar-scanner"
   },
   "name": "keplerjs",
   "description": "Kepler solver to compute a celestial body position over the surface of the earth.",
@@ -14,8 +15,13 @@
     "jest": "^26.6.3",
     "jest-it-up": "^1.2.5",
     "jest-json-reporter": "^1.2.2",
+    "jest-sonar-reporter": "^2.0.0",
     "jest-stare": "^2.2.2",
-    "keplerjs": "^1.0.3"
+    "keplerjs": "^1.0.3",
+    "nodejs-sonar-scanner": "^4.0.4",
+    "sonar-scanner": "^3.1.0",
+    "sonarqube-scanner": "^2.8.1",
+    "supertest": "^6.1.4"
   },
   "repository": {
     "type": "git",
