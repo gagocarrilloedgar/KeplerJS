@@ -1,0 +1,172 @@
+{
+  "baseComponent": {
+    "key": "keplerJS",
+    "name": "keplerJS",
+    "qualifier": "TRK",
+    "measures": [
+      {
+        "metric": "security_hotspots",
+        "value": "0",
+        "bestValue": true
+      },
+      {
+        "metric": "code_smells",
+        "value": "8",
+        "bestValue": false
+      },
+      {
+        "metric": "bugs",
+        "value": "1",
+        "bestValue": false
+      },
+      {
+        "metric": "vulnerabilities",
+        "value": "0",
+        "bestValue": true
+      },
+      {
+        "metric": "ncloc",
+        "value": "224"
+      },
+      {
+        "metric": "coverage",
+        "value": "0.0",
+        "bestValue": false
+      },
+      {
+        "metric": "duplicated_lines_density",
+        "value": "8.3",
+        "bestValue": false
+      }
+    ]
+  },
+  "components": [
+    {
+      "key": "keplerJS:Core",
+      "name": "Core",
+      "qualifier": "DIR",
+      "path": "Core",
+      "measures": [
+        {
+          "metric": "security_hotspots",
+          "value": "0",
+          "bestValue": true
+        },
+        {
+          "metric": "code_smells",
+          "value": "8",
+          "bestValue": false
+        },
+        {
+          "metric": "bugs",
+          "value": "1",
+          "bestValue": false
+        },
+        {
+          "metric": "vulnerabilities",
+          "value": "0",
+          "bestValue": true
+        },
+        {
+          "metric": "ncloc",
+          "value": "154"
+        },
+        {
+          "metric": "coverage",
+          "value": "0.0",
+          "bestValue": false
+        },
+        {
+          "metric": "duplicated_lines_density",
+          "value": "0.0",
+          "bestValue": true
+        }
+      ]
+    },
+    {
+      "key": "keplerJS:testing",
+      "name": "testing",
+      "qualifier": "DIR",
+      "path": "testing",
+      "measures": [
+        {
+          "metric": "security_hotspots",
+          "value": "0",
+          "bestValue": true
+        },
+        {
+          "metric": "code_smells",
+          "value": "0",
+          "bestValue": true
+        },
+        {
+          "metric": "bugs",
+          "value": "0",
+          "bestValue": true
+        },
+        {
+          "metric": "vulnerabilities",
+          "value": "0",
+          "bestValue": true
+        },
+        {
+          "metric": "ncloc",
+          "value": "68"
+        },
+        {
+          "metric": "coverage",
+          "value": "0.0",
+          "bestValue": false
+        },
+        {
+          "metric": "duplicated_lines_density",
+          "value": "46.2",
+          "bestValue": false
+        }
+      ]
+    },
+    {
+      "key": "keplerJS:index.js",
+      "name": "index.js",
+      "qualifier": "FIL",
+      "path": "index.js",
+      "language": "js",
+      "measures": [
+        {
+          "metric": "ncloc",
+          "value": "2"
+        },
+        {
+          "metric": "coverage",
+          "value": "0.0",
+          "bestValue": false
+        },
+        {
+          "metric": "bugs",
+          "value": "0",
+          "bestValue": true
+        },
+        {
+          "metric": "code_smells",
+          "value": "0",
+          "bestValue": true
+        },
+        {
+          "metric": "duplicated_lines_density",
+          "value": "0.0",
+          "bestValue": true
+        },
+        {
+          "metric": "security_hotspots",
+          "value": "0",
+          "bestValue": true
+        },
+        {
+          "metric": "vulnerabilities",
+          "value": "0",
+          "bestValue": true
+        }
+      ]
+    }
+  ]
+}
