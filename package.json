@@ -1,6 +1,7 @@
 {
   "scripts": {
     "test": "jest --verbose",
+    "coverage:coveralls": "jest -i --coverage --coverageReporters=text-lcov | coveralls",
     "sonar-scanner": "node_modules/sonar-scanner/bin/sonar-scanner"
   },
   "name": "keplerjs",
@@ -10,9 +11,17 @@
   "dependencies": {
     "jest-html-reporter": "^3.4.1",
     "mathjs": "^9.3.0",
-    "shelljs": "^0.8.4"
+    "shelljs": "^0.8.4",
+    "swagger-jsdoc": "^6.1.0",
+    "swagger-ui-express": "^4.1.6"
   },
   "devDependencies": {
+    "coveralls": "^3.1.1",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
     "jest": "^26.6.3",
     "jest-it-up": "^1.2.5",
     "jest-json-reporter": "^1.2.2",
