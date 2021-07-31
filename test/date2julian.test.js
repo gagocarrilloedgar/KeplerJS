@@ -1,5 +1,5 @@
 const { expect } = require('@jest/globals')
-const { date2julian } = require('../Core/date2julian')
+const { date2julian } = require('../src/Core/date2julian')
 
 // First test
 

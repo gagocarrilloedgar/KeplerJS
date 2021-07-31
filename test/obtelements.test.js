@@ -1,5 +1,5 @@
 const { expect } = require("@jest/globals");
-const { obtelements } = require("../Core/obtelements");
+const { obtelements } = require("../src/Core/obtelements");
 
 
 describe('Transform to IU system:', () => {

@@ -2,29 +2,26 @@
  * Astrodynamics | Kepler Solver
  * Author: Edgar Gago Carrillo
  * Date 16/03/2021
- * 
+ *
  * Description
- * Computation of the true anomally 
+ * Computation of the true anomally
  *
  * Inputs
  * ibt: orbital elements {}
  * E: eccentric anomaly [rad]
- * 
+ *
  * Ouputs
  * theta: true anomaly [rad]
- * 
+ *
  */
 
 exports.trueanom = (obt, E) => {
-    const e = obt.e;
+  const e = obt.e
 
-    let c1 = (1 - e) / (1 + e);
-    c1 = Math.sqrt(c1);
+  let c1 = (1 - e) / (1 + e)
+  c1 = Math.sqrt(c1)
 
-    let c2 = Math.tan(E / 2);
+  const c2 = Math.tan(E / 2)
 
-    let theta = 2 * Math.atan(c2 / c1);
-
-    return theta;
-
+  return 2 * Math.atan(c2 / c1)
 }

@@ -1,18 +1,33 @@
 {
-  "scripts": {
-    "test": "jest --verbose",
-    "coverage:coveralls": "jest -i --coverage --coverageReporters=text-lcov | coveralls",
-    "sonar-scanner": "node_modules/sonar-scanner/bin/sonar-scanner"
-  },
   "name": "keplerjs",
   "description": "Kepler solver to compute a celestial body position over the surface of the earth.",
   "version": "1.0.3",
   "main": "index.js",
+  "author": "Edgar Gago Carrillo",
+  "license": "ISC",
+  "homepage": "https://github.com/gagocarrilloedgar/KelperJS#readme",
+  "keywords": [
+    "HackThatStartup",
+    "Lambert",
+    "NodeJS",
+    "JS"
+  ],
+  "bugs": {
+    "url": "https://github.com/gagocarrilloedgar/KelperJS/issues"
+  },
+  "scripts": {
+    "test": "jest --verbose",
+    "sonar-scanner": "node_modules/sonar-scanner/bin/sonar-scanner",
+    "dev": "NODE_ENV=development nodemon src/index.js"
+  },
   "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
     "jest-html-reporter": "^3.4.1",
     "mathjs": "^9.3.0",
     "shelljs": "^0.8.4",
     "swagger-jsdoc": "^6.1.0",
+    "swagger-ui": "^3.51.2",
     "swagger-ui-express": "^4.1.6"
   },
   "devDependencies": {
@@ -29,6 +44,7 @@
     "jest-stare": "^2.2.2",
     "keplerjs": "^1.0.3",
     "nodejs-sonar-scanner": "^4.0.4",
+    "nodemon": "^2.0.12",
     "sonar-scanner": "^3.1.0",
     "supertest": "^6.1.4"
   },
@@ -36,30 +52,19 @@
     "type": "git",
     "url": "git+https://github.com/gagocarrilloedgar/KelperJS.git"
   },
-  "keywords": [
-    "HackThatStartup",
-    "Lambert",
-    "NodeJS",
-    "JS"
-  ],
-  "author": "Edgar Gago Carrillo",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/gagocarrilloedgar/KelperJS/issues"
-  },
-  "homepage": "https://github.com/gagocarrilloedgar/KelperJS#readme",
   "jest": {
     "collectCoverage": true,
-    "coverageDirectory": "./testing/report",
+    "coverageDirectory": "./test/report",
     "forceCoverageMatch": [
       "**/*.t.js"
     ],
     "coverageReporters": [
-      "json-summary"
+      "json-summary",
+      "lcov"
     ],
     "testResultsProcessor": "jest-json-reporter"
   },
   "jestJsonReporter": {
-    "outputFile": "./testing/report/results.json"
+    "outputFile": "./test/report/results.json"
   }
 }

@@ -1,5 +1,5 @@
 const { expect } = require("@jest/globals");
-const { deg2rad } = require("../Core/deg2rad")
+const { deg2rad } = require("../src/Core/deg2rad")
 
 
 describe('Convert degrees to rad ', () => {
