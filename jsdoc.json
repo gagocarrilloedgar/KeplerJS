@@ -1,0 +1,15 @@
+{
+  "opts": {
+    "template": "node_modules/tui-jsdoc-template"
+  },
+  "templates": {
+    "logo": {
+      "url": "https://avatars.githubusercontent.com/u/77013947?s=200&v=4",
+      "width": "150px",
+      "height": "150px",
+      "link": "https://github.com/nuwe-io"
+    },
+    "name": "Documentation for keplerJS",
+    "footerText": "keplerJS documentation page"
+  }
+}
