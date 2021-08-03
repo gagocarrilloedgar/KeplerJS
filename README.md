@@ -41,7 +41,7 @@ body2latlong(body);
 
 ```
 
-# Outputs
+## Outputs
 
 ```javascript
 
