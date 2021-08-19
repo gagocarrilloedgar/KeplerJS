@@ -1,49 +1,29 @@
 const express = require('express')
 const router = express.Router()
+
 /**
- * @swagger
- * components:
- *   schemas:
- *     Book:
- *       type: object
- *       required:
- *         - title
- *         - author
- *       properties:
- *         id:
- *           type: string
- *           description: The auto-generated id of the book
- *         title:
- *           type: string
- *           description: The book title
- *         author:
- *           type: string
- *           description: The book author
- *       example:
- *         id: d5fE_asz
- *         title: The New Turing Omnibus
- *         author: Alexander K. Dewdney
+ * This is a model definition
+ * @typedef {Object} Song
+ * @param {string} title.required - The title
+ * @property {string} artist - The artist
+ * @returns {integer} year - The year
  */
 
 /**
- * @swagger
- * /books:
- *   get:
- *     summary: Remove the book by id
- *     tags: [Books]
- *     parameters:
- *       - in: path
- *         name: id
- *         schema:
- *           type: string
- *         required: true
- *         description: The book id
- *
- *     responses:
- *       200:
- *         description: The book was deleted
- *       404:
- *         description: The book was not found
+ * GET /books
+ * @summary This is the summary of the endpoint
+ * @tags album
+ * @security BasicAuth
+ * @param {string} name.required - name param description
+ * @return {array<Song>} 200 - success response - application/json
+ * @example response - 200 - success response example
+ * [
+ *   {
+ *     "title": "Bury the light",
+ *     "artist": "Casey Edwards ft. Victor Borba",
+ *     "year": 2020
+ *   }
+ * ]
  */
 router.get('/books', (req, res) => {
   res.sendStatus(200)

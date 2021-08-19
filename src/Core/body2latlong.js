@@ -16,7 +16,7 @@ exports.body2latlong = (body) => {
   // Standard gravitational parameter of the sun
   const mu = 1.32712440018e11 // [km ^ 3 s ^ -2]
 
-  // Earth object
+  // Earth object fds
   // for the simiplicity of the constant we have supposed
   // the orbital parameters of the earth to be the ones in 0 JD
 
