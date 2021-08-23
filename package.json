@@ -43,6 +43,7 @@
     "jest-json-reporter": "^1.2.2",
     "jest-sonar-reporter": "^2.0.0",
     "jest-stare": "^2.2.2",
+    "jsdoc-to-markdown": "^7.0.1",
     "keplerjs": "^1.0.3",
     "nodejs-sonar-scanner": "^4.0.4",
     "nodemon": "^2.0.12",

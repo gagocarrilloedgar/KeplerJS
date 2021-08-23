@@ -17,6 +17,10 @@
 /**
  *
  * @param {*} x
- * @returns
+ * @returns {Number}
+ * @example
+ * // returns 3.14
+ * deg2rad(90);
+ * @returns {Number} Returns the value of x for the equation.
  */
 exports.deg2rad = (x) => (x * Math.PI) / 180

@@ -1,20 +1,9 @@
 /**
- * Astrodynamics | Kepler Solver
- * Author: Edgar Gago Carrillo
- * Date 16/03/2021
- *
- * Inputs:
- * Calendar date format: year, month, day, hour, minute, second
- * Outputs:
- * JD: Julian Day
- *
- * Description:
- * Function that generates the Julian date from a traditional date time format
- * more info about Juñian dates:
- *
- *
+ * @docs // Core // date2julian
+ * @desc Function that generates the Julian date from a traditional date time format more info about Juñian dates:
+ * @param {Date} date - Calendar date format: year, month, day, hour, minute, second
+ * @returns {Number} JD - JD: Julian Day
  */
-
 exports.date2julian = (date) => {
   if (date === undefined) {
     return 0

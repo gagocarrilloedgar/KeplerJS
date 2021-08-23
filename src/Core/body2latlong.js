@@ -9,7 +9,7 @@ const { trueanom } = require('./trueanom')
 /**
  *
  * @param {*} body
- * @returns
+ * @returns {Object}
  */
 
 exports.body2latlong = (body) => {

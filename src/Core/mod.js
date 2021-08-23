@@ -2,7 +2,7 @@
  *
  * @param {*} n
  * @param {*} m
- * @returns
+ * @returns {Number}
  */
 
 exports.mod = (n, m) => ((n % m) + m) % m
