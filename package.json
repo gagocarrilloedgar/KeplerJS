@@ -23,7 +23,7 @@
   "dependencies": {
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "express-jsdoc-swagger": "^1.6.4",
+    "express-jsdoc-swagger": "^1.6.5",
     "jest-html-reporter": "^3.4.1",
     "mathjs": "^9.3.0",
     "shelljs": "^0.8.4",
