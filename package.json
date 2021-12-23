@@ -24,7 +24,7 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-jsdoc-swagger": "^1.6.4",
-    "jest-html-reporter": "^3.4.1",
+    "jest-html-reporter": "^3.4.2",
     "mathjs": "^9.3.0",
     "shelljs": "^0.8.4",
     "swagger-jsdoc": "^6.1.0",
